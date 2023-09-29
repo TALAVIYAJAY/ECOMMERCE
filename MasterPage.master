@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+        
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    
+    <div>
+            <nav class="navbar navbar-custom fixed-top navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active topnav">
+                    <a class="nav-link" href="index.aspx">Home <span class="sr-only">(current)</span></a>
+                    <div class="underline"></div>
+                </li>
+                <li class="nav-item topnav">
+                    <a class="nav-link" href="features.aspx">FEATURES</a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown topnav">
+                    <a class="nav-link dropdown" href="#" id="navbardrop" data-toggle="dropdown">
+                        COLLECTION
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Home.aspx">Home & Appliances</a>
+                        <a class="dropdown-item" href="Electronics.aspx">Electronics</a>
+                        <a class="dropdown-item" href="Men.aspx">Men fashion</a>
+                        <a class="dropdown-item" href="Women.aspx">Women fashion</a>
+                        <a class="dropdown-item" href="sport.aspx">Sports</a>
+                        <a class="dropdown-item" href="Book.aspx">Books</a>
+                        <a class="dropdown-item" href="offer.aspx">Offer Zone</a>
+                    </div>
+                </li>
+                <!-- Dropdown close -->
+              
+                <li class="nav-item topnav">
+                    <a class="nav-link" href="aboutus.aspx">ABOUT US</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-white btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+
+
+                <a href="signin.aspx"> <button type="button" class="btn btn-white btn-outline-dark mx-2 my-sm-0">
+                    <asp:Label ID="Label1" runat="server" Text="sign in"></asp:Label></button></a>
+
+                <button type="button" class="btn btn-white btn-outline-dark mx-2 my-sm-0" data-toggle="modal"
+                    data-target="#cart">
+                    <i class="fas fa-shopping-cart"> (<span class="total-count"></span>)</button></i>
+            </form>
+        </div>
+    </nav>
+  </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        
+
+  
+        <div class="container-fluid">
+        <footer class="footers">
+            <div class="row">
+                <div class="col-12 col-md col-sm col-lg">
+                    <hr>
+                    <img class="mb-2" src="./Assets/logo1.png" alt="Logo" class="bg-white">
+                    <small class="d-block mb-3 text-muted">© 2017-2020</small>
+                </div>
+                <div class="col-6 col-md col-sm col-lg">
+                    <hr>
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small text-color-white">
+                        <li><a class="text-muted" href="#">Cool stuff</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                        <li><a class="text-muted" href="#">Another one</a></li>
+                        <li><a class="text-muted" href="#">Last time</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md col-sm col-lg">
+                    <hr>
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Resource</a></li>
+                        <li><a class="text-muted" href="#">Resource name</a></li>
+                        <li><a class="text-muted" href="#">Another resource</a></li>
+                        <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md col-sm col-lgs">
+                    <hr>
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md col-sm col-lgs">
+                    <hr>
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <h5>
+                    <i class="fa fa-copyright " aria-hidden="true">
+                        copyright 2020 for Online Store.
+                    </i>
+                </h5>
+            </div>
+        </footer>
+    </div>
+    <div>
+        <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+                    </table>
+                    <div class="text-right"><b>Total price: ₹</b><span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="clear-cart btn btn-danger">Clear Cart</button>
+                    <a href="ordernow.aspx">
+                        <button type="button" id="btn1" class="btn btn-primary">Order now</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/53dce8a43e.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./js/style.js"></script>
+    <script src="C:\Users\admin\source\repos\project\project\Bootstarp\js\bootstrap.min"></script>
+</html>
